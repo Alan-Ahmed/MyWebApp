@@ -1,0 +1,17 @@
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\bin\Debug\net8.0\InfrastructureLayer.deps.json
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\bin\Debug\net8.0\InfrastructureLayer.runtimeconfig.json
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\bin\Debug\net8.0\InfrastructureLayer.dll
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\bin\Debug\net8.0\InfrastructureLayer.pdb
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\bin\Debug\net8.0\DomainLayer.dll
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\bin\Debug\net8.0\DomainLayer.pdb
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\obj\Debug\net8.0\InfrastructureLayer.csproj.AssemblyReference.cache
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\obj\Debug\net8.0\InfrastructureLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\obj\Debug\net8.0\InfrastructureLayer.AssemblyInfoInputs.cache
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\obj\Debug\net8.0\InfrastructureLayer.AssemblyInfo.cs
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\obj\Debug\net8.0\InfrastructureLayer.csproj.CoreCompileInputs.cache
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\obj\Debug\net8.0\Infrastr.B5BC0072.Up2Date
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\obj\Debug\net8.0\InfrastructureLayer.dll
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\obj\Debug\net8.0\refint\InfrastructureLayer.dll
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\obj\Debug\net8.0\InfrastructureLayer.pdb
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\obj\Debug\net8.0\InfrastructureLayer.genruntimeconfig.cache
+C:\Users\46739\OneDrive\Skrivbord\MyWebApp\InfrastructureLayer\obj\Debug\net8.0\ref\InfrastructureLayer.dll
