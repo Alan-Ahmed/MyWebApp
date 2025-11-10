@@ -1,28 +1,32 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
-name: .NET
+name: Discord - Notify on push
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - '**'          # kör på ALLA branches (enkelt att testa)
+  workflow_dispatch:  # så du kan köra manuellt från Actions
 
 jobs:
-  build:
-
+  notify-discord:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      - name: Kontrollera och skicka till Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK }}
+        run: |
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "❌ Secret DISCORD_WEBHOOK saknas eller är tomt."
+            exit 1
+          fi
+
+          echo "✅ Secret DISCORD_WEBHOOK finns."
+
+          MESSAGE="✅ Alan är klar! 🚀 Ny push till ${GITHUB_REPOSITORY} på branch ${GITHUB_REF_NAME} av ${GITHUB_ACTOR}"
+
+          echo "Skickar detta meddelande:"
+          echo "$MESSAGE"
+
+          curl -v -H "Content-Type: application/json" \
+               -d "{\"content\": \"${MESSAGE}\"}" \
+               "$DISCORD_WEBHOOK_URL"
