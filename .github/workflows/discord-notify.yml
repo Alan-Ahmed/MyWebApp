@@ -3,25 +3,39 @@ name: Discord - Notify on push
 on:
   push:
     branches:
-      - discord-setup
+      - '**'          # kör på ALLA branches
+  workflow_dispatch:  # så du kan starta den manuellt från GitHub
 
 jobs:
   notify-discord:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Skicka meddelande till Discord
-        env:
-          DISCORD_WEBHOOK_URL: ${ https://discord.com/api/webhooks/1437202063665790977/muFrpFL6E-oFlOWZaHPFWhgRRzj1lOEfJvip4PHNcN0iZovP7wofoHT0oDhXDShzkXhz}  # <-- ändra till ditt secret-namn
+      - name: Visa info om körningen
         run: |
-          if [ -z "${DISCORD_WEBHOOK_URL}" ]; then
-            echo "❌ Discord webhook saknas. Kontrollera att secret finns."
+          echo "Repo: ${GITHUB_REPOSITORY}"
+          echo "Branch: ${GITHUB_REF_NAME}"
+          echo "Actor: ${GITHUB_ACTOR}"
+
+      - name: Kontrollera att webhook-secret finns
+        env:
+          DISCORD_WEBHOOK_URL: ${ secrets.DISCORD_WEBHOOK_URL }
+        run: |
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "❌ Secret DISCORD_WEBHOOK_URL saknas eller är tomt."
             exit 1
           fi
 
-          MESSAGE="✅ Alan är klar! 🚀 Ny push till ${MyWebApp} på branch ${main} av ${Alan-Ahmed}"
+          echo "✅ Secret DISCORD_WEBHOOK_URL finns och är inte tomt."
 
-          echo "Skickar meddelande till Discord..."
-          curl -H "Content-Type: application/json" \
+      - name: Skicka meddelande till Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${ secrets.DISCORD_WEBHOOK_URL }
+        run: |
+          MESSAGE="✅ Alan är klar! 🚀 Ny push till ${GITHUB_REPOSITORY} på branch ${GITHUB_REF_NAME} av ${GITHUB_ACTOR}"
+          echo "Skickar detta meddelande:"
+          echo "${MESSAGE}"
+
+          curl -v -H "Content-Type: application/json" \
                -d "{\"content\": \"${MESSAGE}\"}" \
-               "${https://discord.com/api/webhooks/1437202063665790977/muFrpFL6E-oFlOWZaHPFWhgRRzj1lOEfJvip4PHNcN0iZovP7wofoHT0oDhXDShzkXhz}"
+               "${DISCORD_WEBHOOK_URL}"
