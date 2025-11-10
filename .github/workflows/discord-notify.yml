@@ -19,9 +19,9 @@ jobs:
 
       - name: Kontrollera att webhook-secret finns
         env:
-          DISCORD_WEBHOOK_URL: ${ secrets.DISCORD_WEBHOOK_URL }
+          DISCORD_WEBHOOK_URL: ${ secrets.DISCORD_WEBHOOK }
         run: |
-          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+          if [ -z "$DISCORD_WEBHOOK" ]; then
             echo "❌ Secret DISCORD_WEBHOOK_URL saknas eller är tomt."
             exit 1
           fi
@@ -30,7 +30,7 @@ jobs:
 
       - name: Skicka meddelande till Discord
         env:
-          DISCORD_WEBHOOK_URL: ${ secrets.DISCORD_WEBHOOK_URL }
+          DISCORD_WEBHOOK_URL: ${ secrets.DISCORD_WEBHOOK }
         run: |
           MESSAGE="✅ Alan är klar! 🚀 Ny push till ${GITHUB_REPOSITORY} på branch ${GITHUB_REF_NAME} av ${GITHUB_ACTOR}"
           echo "Skickar detta meddelande:"
@@ -38,4 +38,4 @@ jobs:
 
           curl -v -H "Content-Type: application/json" \
                -d "{\"content\": \"${MESSAGE}\"}" \
-               "${DISCORD_WEBHOOK_URL}"
+               "${DISCORD_WEBHOOK}"
