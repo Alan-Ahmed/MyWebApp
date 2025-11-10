@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\46739\\OneDrive\\Skrivbord\\MyWebApp\\InfrastructureLayer\\InfrastructureLayer.csproj": {}
+    "C:\\Users\\46739\\OneDrive\\Skrivbord\\botDiscord(4)\\MyWebApp\\InfrastructureLayer\\InfrastructureLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\46739\\OneDrive\\Skrivbord\\MyWebApp\\DomainLayer\\DomainLayer.csproj": {
+    "C:\\Users\\46739\\OneDrive\\Skrivbord\\botDiscord(4)\\MyWebApp\\DomainLayer\\DomainLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\46739\\OneDrive\\Skrivbord\\MyWebApp\\DomainLayer\\DomainLayer.csproj",
+        "projectUniqueName": "C:\\Users\\46739\\OneDrive\\Skrivbord\\botDiscord(4)\\MyWebApp\\DomainLayer\\DomainLayer.csproj",
         "projectName": "DomainLayer",
-        "projectPath": "C:\\Users\\46739\\OneDrive\\Skrivbord\\MyWebApp\\DomainLayer\\DomainLayer.csproj",
+        "projectPath": "C:\\Users\\46739\\OneDrive\\Skrivbord\\botDiscord(4)\\MyWebApp\\DomainLayer\\DomainLayer.csproj",
         "packagesPath": "C:\\Users\\46739\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\46739\\OneDrive\\Skrivbord\\MyWebApp\\DomainLayer\\obj\\",
+        "outputPath": "C:\\Users\\46739\\OneDrive\\Skrivbord\\botDiscord(4)\\MyWebApp\\DomainLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\46739\\OneDrive\\Skrivbord\\MyWebApp\\InfrastructureLayer\\InfrastructureLayer.csproj": {
+    "C:\\Users\\46739\\OneDrive\\Skrivbord\\botDiscord(4)\\MyWebApp\\InfrastructureLayer\\InfrastructureLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\46739\\OneDrive\\Skrivbord\\MyWebApp\\InfrastructureLayer\\InfrastructureLayer.csproj",
+        "projectUniqueName": "C:\\Users\\46739\\OneDrive\\Skrivbord\\botDiscord(4)\\MyWebApp\\InfrastructureLayer\\InfrastructureLayer.csproj",
         "projectName": "InfrastructureLayer",
-        "projectPath": "C:\\Users\\46739\\OneDrive\\Skrivbord\\MyWebApp\\InfrastructureLayer\\InfrastructureLayer.csproj",
+        "projectPath": "C:\\Users\\46739\\OneDrive\\Skrivbord\\botDiscord(4)\\MyWebApp\\InfrastructureLayer\\InfrastructureLayer.csproj",
         "packagesPath": "C:\\Users\\46739\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\46739\\OneDrive\\Skrivbord\\MyWebApp\\InfrastructureLayer\\obj\\",
+        "outputPath": "C:\\Users\\46739\\OneDrive\\Skrivbord\\botDiscord(4)\\MyWebApp\\InfrastructureLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\46739\\OneDrive\\Skrivbord\\MyWebApp\\DomainLayer\\DomainLayer.csproj": {
-                "projectPath": "C:\\Users\\46739\\OneDrive\\Skrivbord\\MyWebApp\\DomainLayer\\DomainLayer.csproj"
+              "C:\\Users\\46739\\OneDrive\\Skrivbord\\botDiscord(4)\\MyWebApp\\DomainLayer\\DomainLayer.csproj": {
+                "projectPath": "C:\\Users\\46739\\OneDrive\\Skrivbord\\botDiscord(4)\\MyWebApp\\DomainLayer\\DomainLayer.csproj"
               }
             }
           }

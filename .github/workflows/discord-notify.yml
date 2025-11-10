@@ -1,0 +1,27 @@
+name: Discord - Notify on push
+
+on:
+  push:
+    branches:
+      - main  # ändra om du använder annan branch
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Skicka meddelande till Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${ https://discord.com/api/webhooks/1437202063665790977/muFrpFL6E-oFlOWZaHPFWhgRRzj1lOEfJvip4PHNcN0iZovP7wofoHT0oDhXDShzkXhz}  # <-- ändra till ditt secret-namn
+        run: |
+          if [ -z "${DISCORD_WEBHOOK_URL}" ]; then
+            echo "❌ Discord webhook saknas. Kontrollera att secret finns."
+            exit 1
+          fi
+
+          MESSAGE="✅ Alan är klar! 🚀 Ny push till ${MyWebApp} på branch ${main} av ${Alan-Ahmed}"
+
+          echo "Skickar meddelande till Discord..."
+          curl -H "Content-Type: application/json" \
+               -d "{\"content\": \"${MESSAGE}\"}" \
+               "${https://discord.com/api/webhooks/1437202063665790977/muFrpFL6E-oFlOWZaHPFWhgRRzj1lOEfJvip4PHNcN0iZovP7wofoHT0oDhXDShzkXhz}"
