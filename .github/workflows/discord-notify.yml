@@ -32,7 +32,7 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${ secrets.DISCORD_WEBHOOK }
         run: |
-          MESSAGE="✅ Alan är klar! 🚀 Ny push till ${GITHUB_REPOSITORY} på branch ${GITHUB_REF_NAME} av ${GITHUB_ACTOR}"
+          MESSAGE="✅ Alan är klar!  Ny push till ${GITHUB_REPOSITORY} på branch ${GITHUB_REF_NAME} av ${GITHUB_ACTOR}"
           echo "Skickar detta meddelande:"
           echo "${MESSAGE}"
 
