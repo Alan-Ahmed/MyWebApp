@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IkLF1FIYv2E=",
+  "dgSpecHash": "CLWDHAEdAHg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\46739\\OneDrive\\Skrivbord\\MyWebApp\\InfrastructureLayer\\InfrastructureLayer.csproj",
+  "projectFilePath": "C:\\Users\\46739\\OneDrive\\Skrivbord\\botDiscord(4)\\MyWebApp\\InfrastructureLayer\\InfrastructureLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\46739\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\46739\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
