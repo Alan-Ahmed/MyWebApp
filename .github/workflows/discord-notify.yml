@@ -3,7 +3,7 @@ name: Discord - Notify on push
 on:
   push:
     branches:
-      - main  # ändra om du använder annan branch
+      - discord-setup
 
 jobs:
   notify-discord:
