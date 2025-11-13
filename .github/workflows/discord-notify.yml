@@ -1,0 +1,41 @@
+name: Discord - Notify on push
+
+on:
+  push:
+    branches:
+      - '**'          # kör på ALLA branches
+  workflow_dispatch:  # så du kan starta den manuellt från GitHub
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Visa info om körningen
+        run: |
+          echo "Repo: ${GITHUB_REPOSITORY}"
+          echo "Branch: ${GITHUB_REF_NAME}"
+          echo "Actor: ${GITHUB_ACTOR}"
+
+      - name: Kontrollera att webhook-secret finns
+        env:
+          DISCORD_WEBHOOK_URL: ${ secrets.DISCORD_WEBHOOK }
+        run: |
+          if [ -z "$DISCORD_WEBHOOK" ]; then
+            echo "❌ Secret DISCORD_WEBHOOK_URL saknas eller är tomt."
+            exit 1
+          fi
+
+          echo "✅ Secret DISCORD_WEBHOOK_URL finns och är inte tomt."
+
+      - name: Skicka meddelande till Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${ secrets.DISCORD_WEBHOOK }
+        run: |
+          MESSAGE="✅ Alan är klar!  Ny push till ${GITHUB_REPOSITORY} på branch ${GITHUB_REF_NAME} av ${GITHUB_ACTOR}"
+          echo "Skickar detta meddelande:"
+          echo "${MESSAGE}"
+
+          curl -v -H "Content-Type: application/json" \
+               -d "{\"content\": \"${MESSAGE}\"}" \
+               "${DISCORD_WEBHOOK}"
